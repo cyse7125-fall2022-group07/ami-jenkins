@@ -1,0 +1,33 @@
+{
+    "variables": {
+        "instance_size": "t2.small",
+        "ami_name": "jenkins-ami",
+        "base_ami": "ami-052efd3df9dad4825",
+        "ssh_username": "ubuntu",
+        "vpc_id": "vpc-0faee1b98dfe6e311",
+        "subnet_id": "subnet-0210c9905e52f0558"
+    },
+    "builders": [{
+        "type": "amazon-ebs",
+        "region": "us-east-1",
+        "source_ami": "{{user `base_ami`}}",
+        "instance_type": "{{user `instance_size`}}",
+        "ssh_username": "{{user `ssh_username`}}",
+        "ssh_timeout": "20m",
+        "ami_name": "{{user `ami_name`}}",
+        "ssh_pty": "true",
+        "vpc_id": "{{user `vpc_id`}}",
+        "subnet_id": "{{user `subnet_id`}}",
+        "tags": {
+            "Name": "App Name",
+            "BuiltBy": "Packer"
+        }
+    }],
+    "description": "AWS image",
+    "provisioners": [{
+        "type": "shell",
+        "inline": [
+            "sudo apt update -y"
+        ]
+    }]
+}
