@@ -3,9 +3,9 @@
 name: Packer Validation and Building Artifact.
 
 on:
-  push:
+  pull_request:
     branches: [main]
-
+    
 jobs:
   packer:
     runs-on: ubuntu-latest
