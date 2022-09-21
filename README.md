@@ -1,7 +1,7 @@
 # ami-jenkins
 
 
-Submmit by
+Submit by
 * Harshal Jaiswal
 * Shrawani Karpe
 * Vinit Harsora
