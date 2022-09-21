@@ -3,7 +3,7 @@
 name: Packer Validation and Building Artifact.
 
 on:
-  pull_request:
+  push:
     branches: [main]
     
 jobs:
