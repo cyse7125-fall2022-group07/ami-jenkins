@@ -1,3 +1,7 @@
 # ami-jenkins
 
-# Test 1
+
+Submit by
+* Harshal Jaiswal
+* Shrawani Karpe
+* Vinit Harsora
