@@ -10,4 +10,12 @@ sudo apt update
 sudo apt install jenkins -y
 sudo systemctl status jenkins
 sudo systemctl is-enabled jenkins
+sudo apt install nginx -y
+nginx -v
+sudo systemctl status nginx
+sudo systemctl enable nginx
+sudo ufw app list
+sudo snap install core; sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
