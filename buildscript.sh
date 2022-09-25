@@ -13,6 +13,7 @@ sudo systemctl is-enabled jenkins
 sudo apt install nginx -y
 nginx -v
 sudo systemctl status nginx
+sudo systemctl start nginx
 sudo systemctl enable nginx
 sudo ufw app list
 sudo snap install core; sudo snap refresh core
