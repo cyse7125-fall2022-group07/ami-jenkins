@@ -42,7 +42,7 @@ variable "ssh_username" {
 
 variable "subnet_id" {
   type    = string
-  default = "subnet-07abee0a8a9c8fcfe" #vinit
+  default = "subnet-0b2c85518429d5d68" #vinit
   # default = "subnet-068bbe189f839f239" #harshal
   #default = "subnet-09682a1c3e5e0a2aa" #shrawani
 }
