@@ -1,4 +1,4 @@
-# ami-jenkins
+# ami-jenkin
 
 Submitted by
 * Harshal Jaiswal
