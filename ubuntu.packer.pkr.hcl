@@ -25,6 +25,26 @@ variable "AWS_SECRET_ACCESS" {
   default = ""
 }
 
+variable "aws_region" {
+  type    = string
+  default = ""
+}
+
+variable "source_ami" {
+  type    = string
+  default = ""
+}
+
+variable "ssh_username" {
+  type    = string
+  default = ""
+}
+
+variable "ami_users" {
+  type    = list(string)
+  default = []
+}
+
 /* variable "subnet_id" {
   type    = string
   default = "" #vinit
