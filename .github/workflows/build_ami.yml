@@ -28,8 +28,7 @@ jobs:
         uses: hashicorp/packer-github-actions@master
         with:
           command: build
-          arguments: "-color=false -on-error=abort"
-          varFile: variables.hcl
+          arguments: "-var-file=variables.hcl -color=false -on-error=abort"
           target: ubuntu.packer.pkr.hcl
         env:
           CI: true
