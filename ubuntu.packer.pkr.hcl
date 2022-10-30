@@ -25,27 +25,12 @@ variable "AWS_SECRET_ACCESS" {
   default = ""
 }
 
-variable "aws_region" {
-  type    = string
-  default = ""
-}
-
-variable "source_ami" {
-  type    = string
-  default = ""
-}
-
-variable "ssh_username" {
-  type    = string
-  default = ""
-}
-
-variable "subnet_id" {
+/* variable "subnet_id" {
   type    = string
   default = "" #vinit
   # default = "subnet-068bbe189f839f239" #harshal
   #default = "subnet-09682a1c3e5e0a2aa" #shrawani
-}
+} */
 
 # "timestamp" template function replacement
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
@@ -64,7 +49,8 @@ source "amazon-ebs" "ubuntu" {
   secret_key      = "${var.AWS_SECRET_ACCESS}"
   source_ami      = "${var.source_ami}"
   ssh_username    = "${var.ssh_username}"
-  subnet_id       = "${var.subnet_id}"
+  ami_users       = "${var.ami_users}"
+  /* subnet_id       = "${var.subnet_id}" */
   ami_block_device_mappings {
   delete_on_termination = true
   device_name           = "/dev/xvda"

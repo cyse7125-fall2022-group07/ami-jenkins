@@ -5,7 +5,7 @@ name: Packer Validation and Building Artifact.
 on:
   pull_request:
     branches: [main]
-    
+
 jobs:
   packer:
     runs-on: ubuntu-latest
@@ -29,6 +29,7 @@ jobs:
         with:
           command: build
           arguments: "-color=false -on-error=abort"
+          varFile: variables.hcl
           target: ubuntu.packer.pkr.hcl
         env:
           CI: true
