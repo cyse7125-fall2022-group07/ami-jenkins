@@ -27,22 +27,22 @@ variable "AWS_SECRET_ACCESS" {
 
 variable "aws_region" {
   type    = string
-  default = "us-east-1"
+  default = ""
 }
 
 variable "source_ami" {
   type    = string
-  default = "ami-052efd3df9dad4825"
+  default = ""
 }
 
 variable "ssh_username" {
   type    = string
-  default = "ubuntu"
+  default = ""
 }
 
 variable "subnet_id" {
   type    = string
-  default = "subnet-0b2c85518429d5d68" #vinit
+  default = "" #vinit
   # default = "subnet-068bbe189f839f239" #harshal
   #default = "subnet-09682a1c3e5e0a2aa" #shrawani
 }
