@@ -25,7 +25,6 @@ variable "ssh_username" {
 
 variable "ami_users" {
   type    = list(string)
-  default = []
 }
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
