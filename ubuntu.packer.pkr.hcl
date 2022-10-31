@@ -25,7 +25,7 @@ variable "ssh_username" {
 
 variable "ami_users" {
   type    = list(string)
-  default = ["471366770073", "657457564447"]
+  default = []
 }
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
@@ -40,8 +40,8 @@ source "amazon-ebs" "ubuntu" {
   secret_key      = "${var.AWS_SECRET_ACCESS}"
   source_ami      = "${var.source_ami}"
   ssh_username    = "${var.ssh_username}"
-  /* ami_users       = "${var.ami_users}" */
-  ami_users       = ["471366770073", "657457564447"]
+  ami_users       = "${var.ami_users}"
+  /* ami_users       = ["471366770073", "657457564447"] */
   ami_block_device_mappings {
   delete_on_termination = true
   device_name           = "/dev/xvda"
