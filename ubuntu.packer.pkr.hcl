@@ -23,10 +23,10 @@ variable "ssh_username" {
   default = ""
 }
 
-variable "ami_users" {
+/* variable "ami_users" {
   type    = list(string)
   default = []
-}
+} */
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
