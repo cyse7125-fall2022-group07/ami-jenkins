@@ -1,4 +1,4 @@
-# Launching Jenkins AMI using Packer
+# Launch Jenkins AMI using Packer
 
 ## Pre-requirements
 - Configure AWS cli (aws account set-up with proper profile credentials/region needed).
