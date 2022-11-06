@@ -10,6 +10,8 @@ sudo apt update
 sudo apt install jenkins -y
 sudo systemctl status jenkins
 sudo systemctl is-enabled jenkins
+############ Installing Jenkins Plugins ##############
+sudo java -jar jenkins-cli.jar -s http://localhost:8080/ enable-plugin PLUGIN
 ############ Installing Nginx ##############
 sudo apt install nginx -y
 sudo systemctl status nginx
