@@ -9,7 +9,6 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins
 sudo apt update
 sudo apt install jenkins -y
 sudo systemctl status jenkins
-sudo systemctl is-enabled jenkins
 ############ Installing Nginx ##############
 sudo apt install nginx -y
 sudo systemctl status nginx
