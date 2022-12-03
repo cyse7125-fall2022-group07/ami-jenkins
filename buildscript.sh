@@ -1,5 +1,4 @@
 #!/bin/bash
-
 sudo apt update
 ############ Installing Java ##############
 sudo apt install openjdk-11-jre -y
